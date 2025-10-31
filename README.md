@@ -4,6 +4,7 @@
 
 **Unity Voice Command Game** is a PC demo project that demonstrates how to control a **2D/3D** (**evaluating two options**) game character using **voice commands** in **English**.  
 The player can say words like **"run"**, **"walk"**, **"jump"**, **"turn left"**, **"turn right"**, **"go forward"**, **"go back"**, **"shoot"**, or **"attack"**, and the character reacts in real time.
+
 In addition to voice control, the character can also be operated using standard **keyboard inputs**.
 
 This project focuses on **Unity**, **C#**, and simple **speech recognition** integration for **desktop (Windows)** environments.
