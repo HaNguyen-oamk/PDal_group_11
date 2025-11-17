@@ -6,31 +6,28 @@ public class SlimeBullet : MonoBehaviour
     public float lifeTime = 2f;
     public int damage = 1;
 
+    private Rigidbody2D rb;
     private Vector2 moveDirection;
-
-    void Start()
-    {
-        Destroy(gameObject, lifeTime);
-    }
 
     public void SetDirection(Vector2 dir)
     {
         moveDirection = dir.normalized;
     }
 
-    void Update()
+    void Start()
     {
-        transform.Translate(moveDirection * speed * Time.deltaTime);
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = moveDirection * speed;
+        Destroy(gameObject, lifeTime);
     }
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        if (hit.CompareTag("Enemy")) return;
+        if (hit.CompareTag("Enemy"))
+            return;
 
         if (hit.CompareTag("Player"))
         {
-            Debug.Log("Slime bullet hit the player!");
-
             PlayerHealth player = hit.GetComponent<PlayerHealth>();
             if (player != null)
                 player.TakeDamage(damage);

@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 1;   // Số máu tối đa
+    public int maxHealth = 3; //max blood
     private int currentHealth;
 
-    public UnityEngine.UI.Image healthFill;   // <- thêm cái này để fill thanh máu
+    public UnityEngine.UI.Image healthFill;   // <- add blood bar
 
     void Start()
     {

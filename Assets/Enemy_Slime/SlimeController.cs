@@ -102,13 +102,13 @@ public class SlimeController : MonoBehaviour
     GameObject player = GameObject.FindGameObjectWithTag("Player"); //change tag later now tag is gun
     if (player == null) return;
 
-    // Tạo viên đạn
+    // genneral bullet
     GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
-    // Tính hướng từ slime -> player
+    // calculator bullet from slime -> player
     Vector2 dir = (player.transform.position - firePoint.position).normalized;
 
-    // Gửi hướng bay vào script đạn
+    // sent direction script bullet
     SlimeBullet bulletScript = bullet.GetComponent<SlimeBullet>();
     if (bulletScript != null)
         bulletScript.SetDirection(dir);
@@ -129,5 +129,18 @@ public class SlimeController : MonoBehaviour
 
         StopAllCoroutines();
         Destroy(gameObject, 1f);
+    }
+
+    //slime have trigger to player minus one blood
+    void OnTriggerEnter2D(Collider2D hit)
+    {
+        if (hit.CompareTag("Player"))
+        {
+            PlayerHealth player = hit.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                player.TakeDamage(1);   // minus 1 blood
+            }
+        }
     }
 }
