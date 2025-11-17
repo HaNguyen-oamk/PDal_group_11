@@ -128,6 +128,6 @@ public class SlimeController : MonoBehaviour
         anim.SetBool("isDead", true);
 
         StopAllCoroutines();
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 }
