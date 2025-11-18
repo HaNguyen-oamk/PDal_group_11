@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: 600f6ade7c0c3b840a05f0c7cfa5be6b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1148
+        width: 877
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efee20a76318a8c4ea33d11cc27e96d5
+      internalID: 353138698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_1
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1148
+        width: 877
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9645f1ef52d114e489375d21bc4896a5
+      internalID: -573292477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 912
+        width: 877
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb7df5d789870243bcc415da2c37248
+      internalID: 1378733798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_3
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 912
+        width: 877
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3e222c7577c8040b578152e9dbd513
+      internalID: -1149308195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 653
+        width: 803
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e87b90ca0ccd03458a95b7f60eb9b74
+      internalID: 1187654967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 731
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c755568216935104d9ed11a5ade4ff10
+      internalID: 1531033502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_6
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 730
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da534326e8f1bce458cb27ae014ad4a7
+      internalID: 1960574102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_7
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 730
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e683374406336459c30d948e10dfc8
+      internalID: 1458774674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_8
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 653
+        width: 812
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d885f129c943b141aba238a4cd70ea0
+      internalID: 1886300127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_9
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 479
+        width: 803
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0882f7c0b042fcb43bd5f8882f22cad2
+      internalID: -1760832514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_10
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 506
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5e3f120133c654e9db3a7c43a985eb
+      internalID: -60489297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_11
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 506
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa874c1474916a429bc5c189cacc054
+      internalID: -1158516740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_12
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 506
+        width: 86
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1e9ccc497e7b845a5c6cc7c3500cdf
+      internalID: -1477852782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_13
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 320
+        width: 803
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fe8ed08a932624898b6eec62b79cac
+      internalID: 93939995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_14
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 428
+        width: 812
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4201bfc4cb83e4ca16059895044b74
+      internalID: -1431089108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 173
+        width: 803
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257f5a51de90e8f4d9135004f9e9a584
+      internalID: -2138704431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_16
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 279
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dd3da0a9b1ce247a274179cbb0e370
+      internalID: -409932940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_17
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 279
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a85a07020c73ed44967973421ecb7f0
+      internalID: -1521152637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_18
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 279
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bf863decc9fe84c8f2352036d48e84
+      internalID: -634112158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-game-health-bar-element_19
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 201
+        width: 812
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391954e109adfe5469994b5cd2027fae
+      internalID: 1446358500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      video-game-game-health-bar-element_0: 353138698
+      video-game-game-health-bar-element_1: -573292477
+      video-game-game-health-bar-element_10: -60489297
+      video-game-game-health-bar-element_11: -1158516740
+      video-game-game-health-bar-element_12: -1477852782
+      video-game-game-health-bar-element_13: 93939995
+      video-game-game-health-bar-element_14: -1431089108
+      video-game-game-health-bar-element_15: -2138704431
+      video-game-game-health-bar-element_16: -409932940
+      video-game-game-health-bar-element_17: -1521152637
+      video-game-game-health-bar-element_18: -634112158
+      video-game-game-health-bar-element_19: 1446358500
+      video-game-game-health-bar-element_2: 1378733798
+      video-game-game-health-bar-element_3: -1149308195
+      video-game-game-health-bar-element_4: 1187654967
+      video-game-game-health-bar-element_5: 1531033502
+      video-game-game-health-bar-element_6: 1960574102
+      video-game-game-health-bar-element_7: 1458774674
+      video-game-game-health-bar-element_8: 1886300127
+      video-game-game-health-bar-element_9: -1760832514
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
