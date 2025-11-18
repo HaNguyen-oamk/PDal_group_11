@@ -3,8 +3,8 @@ using UnityEngine;
 public class SlimeBullet : MonoBehaviour
 {
     public float speed = 5f;
-    public float lifeTime = 2f;
-    public int damage = 1;
+    public float lifeTime = 1f;
+    public float damage = 1f; // damage lose 25% blood
 
     private Rigidbody2D rb;
     private Vector2 moveDirection;
@@ -23,9 +23,7 @@ public class SlimeBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        if (hit.CompareTag("Enemy"))
-            return;
-
+        // if collide Player → damage
         if (hit.CompareTag("Player"))
         {
             PlayerHealth player = hit.GetComponent<PlayerHealth>();
@@ -33,8 +31,11 @@ public class SlimeBullet : MonoBehaviour
                 player.TakeDamage(damage);
 
             Destroy(gameObject);
+            return;
         }
-        else
+
+        // if collide wall or others-> destroy
+        if (!hit.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }
