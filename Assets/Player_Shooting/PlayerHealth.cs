@@ -2,58 +2,60 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 4; // HP
+    public float maxHealth = 4; 
     public float currentHealth;
 
-    public GameObject gameOverUI; // UI panel Game Over
+    public GameObject gameOverUI;
     public HealthBar healthBar;
+
+    Animator anim;
+    Collider2D col;
 
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth, maxHealth);
 
-        // sure gameover layer turn off when start
+        anim = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
+
         if (gameOverUI != null)
             gameOverUI.SetActive(false);
     }
 
     public void TakeDamage(float damage)
     {
+        if (currentHealth <= 0) return;
+
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth, maxHealth);
 
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
-            healthBar.SetHealth(currentHealth, maxHealth);
             Die();
-            return;
         }
-
-        healthBar.SetHealth(currentHealth, maxHealth);
     }
 
     void Die()
     {
         Debug.Log("Player died!");
+        currentHealth = 0;
 
-        // tắt collider để không nhận thêm damage
-        GetComponent<Collider2D>().enabled = false;
+        col.enabled = false;
 
-        // TODO: play animation die like sprite ***Important
-        // GetComponent<Animator>().SetTrigger("die");
+        // Animation die
+        if (anim != null)
+            anim.SetBool("isDead", true);
 
-        // call UI Game Over
-        Invoke("ShowGameOver", 1f);
+        // Hiện UI Game Over sau 1s
+        Invoke(nameof(ShowGameOver), 1f);
     }
 
     void ShowGameOver()
     {
-        // turn on screen game over
         if (gameOverUI != null)
             gameOverUI.SetActive(true);
 
-        //delete player out scene
         Destroy(gameObject);
     }
 

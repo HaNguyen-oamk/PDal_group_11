@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1350451319245221299
+--- !u!1 &81304559911022761
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1350451319245221298}
+  - component: {fileID: 81304559911022760}
   m_Layer: 0
   m_Name: firePoint
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1350451319245221298
+--- !u!4 &81304559911022760
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350451319245221299}
+  m_GameObject: {fileID: 81304559911022761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.08, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1390109358536071682}
+  m_Father: {fileID: 60718709994489624}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4751649262862211856
+--- !u!1 &5939158931022153226
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,13 +39,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1390109358536071682}
-  - component: {fileID: 5579665720016207028}
-  - component: {fileID: 6711794747675068732}
-  - component: {fileID: 7959332867971095576}
-  - component: {fileID: 8550334753303265170}
-  - component: {fileID: 1350451318585221341}
-  - component: {fileID: 7959332867971095579}
+  - component: {fileID: 60718709994489624}
+  - component: {fileID: 6842069716709761454}
+  - component: {fileID: 5672296391340020774}
+  - component: {fileID: 9072542484840448258}
+  - component: {fileID: 7293010500330021512}
+  - component: {fileID: 81304561397464519}
+  - component: {fileID: 9072542484840448257}
   m_Layer: 0
   m_Name: EnemySlime (1)
   m_TagString: Enemy
@@ -53,29 +53,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1390109358536071682
+--- !u!4 &60718709994489624
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6309671, y: -0.6558095, z: 0}
+  m_LocalPosition: {x: 1.7765255, y: 0.9260102, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1350451319245221298}
+  - {fileID: 81304559911022760}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5579665720016207028
+--- !u!212 &6842069716709761454
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2083464259699928970, guid: e0242c0d8534874479e288686d5ae675, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,14 +121,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6711794747675068732
+--- !u!50 &5672296391340020774
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -142,13 +142,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7959332867971095576
+--- !u!58 &9072542484840448258
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -158,14 +158,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.4198176}
   serializedVersion: 2
   m_Radius: 0.4198176
---- !u!95 &8550334753303265170
+--- !u!95 &7293010500330021512
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 293bb6a659427384691f8649f6e2ac93, type: 2}
@@ -179,32 +179,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1350451318585221341
+--- !u!114 &81304561397464519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 844cee3eefcfd8746bcac41cb39763cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 7959332867971095579}
+  audioSource: {fileID: 9072542484840448257}
   shootSound: {fileID: 8300000, guid: ebbed237de04ca44eaab696610ddc5c2, type: 3}
   moveSpeed: 2
   moveRange: 4
   bulletPrefab: {fileID: 6765578965540189401, guid: 698015826981d4b4086502ed4d36d54b, type: 3}
-  firePoint: {fileID: 1350451319245221298}
+  firePoint: {fileID: 81304559911022760}
   attackInterval: 10
---- !u!82 &7959332867971095579
+--- !u!82 &9072542484840448257
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751649262862211856}
+  m_GameObject: {fileID: 5939158931022153226}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
