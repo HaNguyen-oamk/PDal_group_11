@@ -5,10 +5,9 @@ public class VoiceCommandController : MonoBehaviour
     private SharkController shark;
     private PlayerShooting shooter;
 
-    // tránh lặp lệnh liên tục
-    private string lastCommand = "";
-    private float commandCooldown = 0.3f;
-    private float nextCommandTime = 0f;
+    string lastCommand = "";
+    float commandCooldown = 0.2f;
+    float nextCommandTime = 0f;
 
     void Start()
     {
@@ -16,51 +15,50 @@ public class VoiceCommandController : MonoBehaviour
         shooter = FindObjectOfType<PlayerShooting>();
 
         if (shark == null)
-            Debug.LogWarning("⚠ SharkController NOT FOUND in scene!");
-
+            Debug.LogWarning("⚠ SharkController NOT FOUND!");
         if (shooter == null)
-            Debug.LogWarning("⚠ PlayerShooting NOT FOUND in scene!");
+            Debug.LogWarning("⚠ PlayerShooting NOT FOUND!");
     }
 
-    // Hàm fuzzy sửa lỗi giọng Việt nói tiếng Anh
     string Normalize(string cmd)
     {
         cmd = cmd.ToLower().Trim();
 
-        // Fire (shoot)
-        if (
-            cmd.Contains("shoot") ||
-            cmd.Contains("shit") || 
-            cmd.Contains("shut") || 
-            cmd.Contains("sheet") ||
-            cmd.Contains("shot"))
-            return "shoot";
+        // TURN first **
+        if (cmd.Contains("turn left"))
+            return "turn_left";
 
-        // Left
-        if (cmd.Contains("left") ||
-            cmd.Contains("lef") ||
-            cmd.Contains("lep") ||
-            cmd.Contains("letf") ||
-            cmd.Contains("let"))
-            return "left";
+        if (cmd.Contains("turn right"))
+            return "turn_right";
 
-        // Right
-        if (cmd.Contains("right") ||
-            cmd.Contains("rit") ||
-            cmd.Contains("rait"))
-            return "right";
+        // MOVE
+        if (cmd.Contains("go up") || cmd.Contains("move up") || cmd == "up")
+            return "go_up";
 
-        // Run
-        if (cmd.Contains("run") ||
-            cmd.Contains("ran") ||
-            cmd.Contains("ron"))
+        if (cmd.Contains("go down") || cmd.Contains("move down") || cmd == "down")
+            return "go_down";
+
+        if (cmd.Contains("go left") || cmd.Contains("move left") || cmd == "left")
+            return "go_left";
+
+        if (cmd.Contains("go right") || cmd.Contains("move right") || cmd == "right")
+            return "go_right";
+
+        // STOP
+        if (cmd.Contains("stop"))
+            return "stop";
+
+        // SPEED
+        if (cmd.Contains("run") || cmd.Contains("rob"))
             return "run";
 
-        // Walk
-        if (cmd.Contains("walk") ||
-            cmd.Contains("wok") ||
-            cmd.Contains("wolk"))
+        if (cmd.Contains("walk") || cmd.Contains("slow"))
             return "walk";
+
+        // SHOOT / ATTACK
+        if (cmd.Contains("shoot") || cmd.Contains("fire") ||
+            cmd.Contains("attack") || cmd.Contains("hit") || cmd.Contains("bite"))
+            return "attack";
 
         return cmd;
     }
@@ -75,30 +73,62 @@ public class VoiceCommandController : MonoBehaviour
         lastCommand = command;
         nextCommandTime = Time.time + commandCooldown;
 
-        Debug.Log("⚡ VOICE COMMAND: " + command);
+        Debug.Log("VOICE CMD: " + command);
 
-        if (shark == null || shooter == null) return;
+        if (shark == null) return;
 
         switch (command)
         {
             case "run":
-                shark.speed = 5f;
+                shark.currentSpeed = shark.runSpeed;
                 break;
 
             case "walk":
-                shark.speed = 3f;
+                shark.currentSpeed = shark.walkSpeed;
                 break;
 
-            case "shoot":
-                shooter.Shoot();
+            case "go_up":
+                shark.voiceInput = Vector2.up;
+                shark.voiceActive = true;
                 break;
 
-            case "left":
-                shark.transform.localScale = new Vector3(-1, 1, 1);
+            case "go_down":
+                shark.voiceInput = Vector2.down;
+                shark.voiceActive = true;
                 break;
 
-            case "right":
-                shark.transform.localScale = new Vector3(1, 1, 1);
+            case "go_left":
+                shark.voiceInput = Vector2.left;
+                shark.voiceActive = true;
+                shark.GetComponent<SpriteRenderer>().flipX = true;
+                break;
+
+            case "go_right":
+                shark.voiceInput = Vector2.right;
+                shark.voiceActive = true;
+                shark.GetComponent<SpriteRenderer>().flipX = false;
+                break;
+
+            case "turn_left":
+                shark.voiceActive = false;
+                shark.voiceInput = Vector2.zero;
+                shark.GetComponent<SpriteRenderer>().flipX = true;
+                break;
+
+            case "turn_right":
+                shark.voiceActive = false;
+                shark.voiceInput = Vector2.zero;
+                shark.GetComponent<SpriteRenderer>().flipX = false;
+                break;
+
+            case "stop":
+                shark.StopMovement();
+                break;
+
+            case "attack":   // SHOOT like SPACE
+                shark.TriggerAttack();       // animation + logic 
+                if (shooter != null)
+                    shooter.Shoot();        // shoot bullet
                 break;
         }
     }
