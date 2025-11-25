@@ -19,8 +19,7 @@ public class SharkController : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;     // Ngừng mọi thứ khi chết
-
+        if (isDead) return;     
         HandleMovement();
         HandleAttack();
     }
