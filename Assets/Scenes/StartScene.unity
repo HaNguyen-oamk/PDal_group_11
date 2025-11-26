@@ -314,7 +314,7 @@ PrefabInstance:
     - target: {fileID: 477411051975063275, guid: a98e38a09ea5a684fbe07e70cd65fa96, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 905745923}
     - target: {fileID: 477411051975063275, guid: a98e38a09ea5a684fbe07e70cd65fa96, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -456,7 +456,7 @@ PrefabInstance:
     - target: {fileID: 7367843408436352740, guid: 452f2e8b7e5708f4e9551a097c23f3f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 905745923}
     - target: {fileID: 7367843408436352740, guid: 452f2e8b7e5708f4e9551a097c23f3f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -564,6 +564,10 @@ PrefabInstance:
     - target: {fileID: 9100150734294844958, guid: 452f2e8b7e5708f4e9551a097c23f3f2, type: 3}
       propertyPath: m_Name
       value: VerticalBlueButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100150734294844958, guid: 452f2e8b7e5708f4e9551a097c23f3f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 452f2e8b7e5708f4e9551a097c23f3f2, type: 3}
@@ -703,7 +707,7 @@ PrefabInstance:
     - target: {fileID: 222863592513956880, guid: 44373c1366e91194fbd516b802b0337f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 905745923}
     - target: {fileID: 222863592513956880, guid: 44373c1366e91194fbd516b802b0337f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -970,13 +974,14 @@ GameObject:
   - component: {fileID: 905745920}
   - component: {fileID: 905745922}
   - component: {fileID: 905745921}
+  - component: {fileID: 905745923}
   m_Layer: 5
   m_Name: MapSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &905745920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1040,6 +1045,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905745919}
   m_CullTransparentMesh: 0
+--- !u!114 &905745923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905745919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c10185b5f95bff4f9116dd14cfd8e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910749053
 GameObject:
   m_ObjectHideFlags: 0
