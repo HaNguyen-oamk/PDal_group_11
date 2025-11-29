@@ -1,3 +1,33 @@
+// using UnityEngine;
+
+// public class Bullet : MonoBehaviour
+// {
+//     public float lifetime = 0.5f;
+//     public int damage = 1;
+
+//     void Start()
+//     {
+//         Destroy(gameObject, lifetime); // destroy in few sec
+//     }
+
+//     void OnTriggerEnter2D(Collider2D hit)
+//     {
+//         if (hit.CompareTag("Enemy"))
+//         {
+//             // call function die slime
+//             SlimeController slime = hit.GetComponent<SlimeController>();
+//             if (slime != null)
+//             {
+//                 slime.TakeDamage();  // Slime die
+//             }
+
+//             Debug.Log("Player hit: " + hit.name); //debug test
+
+//             Destroy(gameObject); // destroy bullet
+//         }
+//     }
+// }
+
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -7,23 +37,30 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime); // destroy in few sec
+        Destroy(gameObject, lifetime); 
     }
 
     void OnTriggerEnter2D(Collider2D hit)
     {
         if (hit.CompareTag("Enemy"))
         {
-            // call function die slime
+            // DAMAGE SLIME
             SlimeController slime = hit.GetComponent<SlimeController>();
             if (slime != null)
             {
-                slime.TakeDamage();  // Slime die
+                slime.TakeDamage();
             }
 
-            Debug.Log("Player hit: " + hit.name); //debug test
+            // DAMAGE SKELETON
+            SkeletonController skeleton = hit.GetComponent<SkeletonController>();
+            if (skeleton != null)
+            {
+                skeleton.TakeDamage(damage);
+            }
 
-            Destroy(gameObject); // destroy bullet
+            Debug.Log("Player hit: " + hit.name);
+
+            Destroy(gameObject);
         }
     }
 }
