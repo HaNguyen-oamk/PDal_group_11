@@ -116,6 +116,12 @@ public class SkeletonController : MonoBehaviour
         // Stop movement/logic
         this.enabled = false;
 
-        Destroy(gameObject, 2f);  // wait for animation to finish
+        // Notify LevelManager
+        LevelManager lm = FindObjectOfType<LevelManager>();
+        if (lm != null)
+            lm.EnemyDied();
+
+        Destroy(gameObject, 2f);
     }
+
 }
