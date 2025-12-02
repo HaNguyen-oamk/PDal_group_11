@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
     private int currentWave = 0;
 
     private int enemiesAlive = 0;
+    public float spawnDelay = 1.5f;
 
     void Start()
     {
@@ -38,28 +40,29 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        SpawnWaveEnemies();
+        StartCoroutine(SpawnWaveEnemies());
     }
 
-    void SpawnWaveEnemies()
+    
+    IEnumerator SpawnWaveEnemies()
     {
         int slimeCount = level * 2 * currentWave;
         int skeletonCount = level * currentWave;
 
         enemiesAlive = slimeCount + skeletonCount;
 
-        // Spawn Slimes
         for (int i = 0; i < slimeCount; i++)
         {
             int index = Random.Range(0, spawnPoints.Length);
             Instantiate(slimePrefab, spawnPoints[index].position, Quaternion.identity);
+            yield return new WaitForSeconds(spawnDelay); 
         }
 
-        // Spawn Skeletons
         for (int i = 0; i < skeletonCount; i++)
         {
             int index = Random.Range(0, spawnPoints.Length);
             Instantiate(skeletonPrefab, spawnPoints[index].position, Quaternion.identity);
+            yield return new WaitForSeconds(spawnDelay); 
         }
     }
 
