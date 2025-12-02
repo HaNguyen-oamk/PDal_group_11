@@ -7,7 +7,7 @@ public class MapSelectController : MonoBehaviour
 {
     public void OnSelect1()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Voicecontrol");
     }
 
     
