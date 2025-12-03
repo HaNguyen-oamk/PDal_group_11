@@ -545,7 +545,7 @@ PrefabInstance:
       objectReference: {fileID: 1562550336}
     - target: {fileID: 3441937308721328482, guid: 7bdba1b6952cea448b435667d03da5e4, type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3441937308721328482, guid: 7bdba1b6952cea448b435667d03da5e4, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -1577,13 +1577,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0f49bc91e9874465496f45a8cdaf762c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.279
+  m_Volume: 0.226
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 134
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1704,16 +1704,16 @@ RectTransform:
   m_GameObject: {fileID: 1464088242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.026675, y: 1.053, z: 1.053}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1239174302}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96, y: -91.015}
-  m_SizeDelta: {x: 61.089996, y: 50}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 139.58, y: 172.47}
+  m_SizeDelta: {x: 79.84, y: 68.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464088244
 MonoBehaviour:
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c84eed0b7bb40402ea73a0bc6018e75f, type: 3}
+  m_Sprite: {fileID: -596658662, guid: 4a0b9bd84f0784826a695db177d08d42, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
