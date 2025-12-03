@@ -66,7 +66,6 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Healed! Health: " + currentHealth + "/" + maxHealth);
         }
 
-
     void Die()
     {
         Debug.Log("Player died!");

@@ -64,8 +64,7 @@ public class PlayerHealth : MonoBehaviour
         if (healthBar != null)
             healthBar.SetHealth(currentHealth, maxHealth);
         Debug.Log("Healed! Health: " + currentHealth + "/" + maxHealth);
-        }
-
+    }
 
     void Die()
     {

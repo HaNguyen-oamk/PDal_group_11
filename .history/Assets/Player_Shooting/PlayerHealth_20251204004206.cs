@@ -56,16 +56,13 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
-    }
-    
-    public void Heal(float amount)
-    {
-        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);  // Can't go over 4
-        if (healthBar != null)
-            healthBar.SetHealth(currentHealth, maxHealth);
-        Debug.Log("Healed! Health: " + currentHealth + "/" + maxHealth);
-        }
-
+    }public void Heal(float amount)
+{
+    currentHealth = Mathf.Min(currentHealth + amount, maxHealth);  // Can't go over 4
+    if (healthBar != null)
+        healthBar.SetHealth(currentHealth, maxHealth);
+    Debug.Log("Healed! Health: " + currentHealth + "/" + maxHealth);
+}
 
     void Die()
     {

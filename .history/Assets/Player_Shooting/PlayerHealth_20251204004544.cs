@@ -63,10 +63,8 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);  // Can't go over 4
         if (healthBar != null)
             healthBar.SetHealth(currentHealth, maxHealth);
-        Debug.Log("Healed! Health: " + currentHealth + "/" + maxHealth);
-        }
-
-
+        Debug.Log("Healed! Health: " + currentHealth + "/" + maxHealth);}
+}
     void Die()
     {
         Debug.Log("Player died!");
