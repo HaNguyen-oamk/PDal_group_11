@@ -24,5 +24,11 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f; // Ensure time scale is reset
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+    }
+
+    public void QuitToMainMenu()
+    {
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene("StartScene"); 
+    }
 }

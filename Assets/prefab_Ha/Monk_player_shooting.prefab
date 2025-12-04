@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6656904557827418603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 0.95, z: 0}
+  m_LocalPosition: {x: 0.33, y: 0.77, z: 0}
   m_LocalScale: {x: 1.5199026, y: 1.5199026, z: 1.5199026}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 6656904557874026477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.98, y: -1.38, z: 0}
-  m_LocalScale: {x: 1.2883307, y: 1.490117, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6656904557827418602}
@@ -137,9 +137,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 4271635158693208950}
   shootSound: {fileID: 8300000, guid: a99d5292dfa06ce43a7abb9a5a5ac6d7, type: 3}
-  bulletPrefab: {fileID: 7359603957434375093, guid: b3055331922399746890be28a81fb479, type: 3}
+  bulletPrefab: {fileID: 4194738990611550122, guid: 1a2765e47f043ff4cb6c9fb505e6aa03, type: 3}
   firePoint: {fileID: 6656904557827418602}
   bulletSpeed: 10
+  enemyTag: Enemy
+  searchRadius: 20
 --- !u!50 &6656904557874026472
 Rigidbody2D:
   serializedVersion: 4
@@ -332,5 +334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac54becc40ef5a14cab4fc2c59196c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  walkSpeed: 3
+  runSpeed: 6
+  voiceMoveSpeed: 1.5
+  currentSpeed: 3
+  voiceInput: {x: 0, y: 0}
+  voiceActive: 0
+  activeVoiceSpeed: 0
   anim: {fileID: 1629962096247695486}
