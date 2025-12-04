@@ -1,94 +1,109 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // --- Public Settings ---
     public int level = 1;
 
-    // Drag SpawnPoints here
     public Transform[] spawnPoints; 
     public GameObject slimePrefab;
     public GameObject skeletonPrefab;
 
-    // UI Panel that pops up when the level is finished
     public GameObject levelCompleteUI; 
 
-    // --- Private State ---
+    public int totalWaves = 3;  
+    private int currentWave = 0;
+
     private int enemiesAlive = 0;
+    public float spawnDelay = 1.5f;
 
     void Start()
     {
-        // Ensure the game starts running normally
         Time.timeScale = 1f;
-        
-        // Hide the Level Complete UI initially
+
         if (levelCompleteUI != null)
             levelCompleteUI.SetActive(false);
-            
-        SpawnEnemies();
+
+        StartNextWave();
     }
 
-    void SpawnEnemies()
+    void StartNextWave()
     {
-        int slimeCount = level * 2;
-        int skeletonCount = level;
+        currentWave++;
+        Debug.Log($"Starting wave {currentWave} of {totalWaves}");
+
+        if (currentWave > totalWaves)
+        {
+            LevelCompleted();
+            return;
+        }
+
+        StartCoroutine(SpawnWaveEnemies());
+    }
+
+    
+    IEnumerator SpawnWaveEnemies()
+    {
+        int slimeCount = level * 2 * currentWave;
+        int skeletonCount = level * currentWave;
 
         enemiesAlive = slimeCount + skeletonCount;
 
-        // Spawn Slimes
         for (int i = 0; i < slimeCount; i++)
         {
             int index = Random.Range(0, spawnPoints.Length);
             Instantiate(slimePrefab, spawnPoints[index].position, Quaternion.identity);
+            yield return new WaitForSeconds(spawnDelay); 
         }
 
-        // Spawn Skeletons
         for (int i = 0; i < skeletonCount; i++)
         {
             int index = Random.Range(0, spawnPoints.Length);
             Instantiate(skeletonPrefab, spawnPoints[index].position, Quaternion.identity);
+            yield return new WaitForSeconds(spawnDelay); 
         }
     }
 
     public void EnemyDied()
     {
         enemiesAlive--;
+        Debug.Log("Enemy died! Remaining: " + enemiesAlive);
+
+        if (enemiesAlive < 0) enemiesAlive = 0;
 
         if (enemiesAlive <= 0)
         {
-            // Show the UI when all enemies are defeated
-            levelCompleteUI.SetActive(true);
-            // Optional: Pause the game when level is complete if needed
-            // Time.timeScale = 0f; 
+            Invoke(nameof(StartNextWave), 1f);
         }
     }
 
-    // --- Button Functions ---
-
-    // Function called by the "Next Level" Button
     public void NextLevel()
     {
-        // Ensure the game is running normally before spawning new enemies
-        Time.timeScale = 1f; 
-        
+        Time.timeScale = 1f;
+
         level++;
+        currentWave = 0; // RESET waves
         levelCompleteUI.SetActive(false);
-        SpawnEnemies();
+
+        StartNextWave();
     }
 
-    // Function called by the "Restart" Button (e.g., from Game Over or Pause Menu)
     public void RestartLevel()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Function called by the "Exit" Button
     public void ExitToMenu()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    void LevelCompleted()
+    {
+        levelCompleteUI.SetActive(true);
     }
 }

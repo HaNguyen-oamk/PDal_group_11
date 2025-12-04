@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void OnStartClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MapChoiceScene");
     }
 
-    // Update is called once per frame
+    
     public void OnExitClick()
     {
         #if UNITY_EDITOR

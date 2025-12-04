@@ -119,7 +119,6 @@ public class SlimeController : MonoBehaviour
 
     // 
     //  Death handling later ()****
-    //
     public void TakeDamage()
     {
         if (isDead) return;
@@ -127,9 +126,15 @@ public class SlimeController : MonoBehaviour
         isDead = true;
         anim.SetBool("isDead", true);
 
+        // Notify the LevelManager
+        LevelManager lm = FindObjectOfType<LevelManager>();
+        if (lm != null)
+            lm.EnemyDied();
+
         StopAllCoroutines();
         Destroy(gameObject, 1f);
     }
+
 
     //slime have trigger to player minus one blood
     void OnTriggerEnter2D(Collider2D hit)
