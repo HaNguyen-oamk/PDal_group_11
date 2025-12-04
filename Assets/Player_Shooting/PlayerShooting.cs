@@ -72,8 +72,6 @@ public class PlayerShooting : MonoBehaviour
         //  **Find nearest enemy
         Transform target = FindNearestEnemy();
 
-       
-        // ----------------------------------------------------
         if (target == null)
         {
             Debug.Log("No enemy found. Shooting forward.");
