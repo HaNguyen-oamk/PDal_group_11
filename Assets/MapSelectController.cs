@@ -13,7 +13,7 @@ public class MapSelectController : MonoBehaviour
     
     public void OnSelect2()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Voicecontrol 2");
     }
 
     public void OnSelect3()
