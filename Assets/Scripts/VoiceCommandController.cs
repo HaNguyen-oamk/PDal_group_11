@@ -35,7 +35,7 @@ public class VoiceCommandController : MonoBehaviour
         if (cmd.Contains("go up") || cmd.Contains("move up") || cmd == "up")
             return "go_up";
 
-        if (cmd.Contains("go down") || cmd.Contains("move down") || cmd == "down")
+        if (cmd.Contains("go down") || cmd.Contains("move down") || cmd.Contains("no down") || cmd.Contains("down") || cmd.Contains("no doubt")  || cmd.Contains("now"))
             return "go_down";
 
         if (cmd.Contains("go left") || cmd.Contains("move left") || cmd == "left")
