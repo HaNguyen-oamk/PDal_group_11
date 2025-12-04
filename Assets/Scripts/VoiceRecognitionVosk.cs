@@ -5,7 +5,7 @@ using System.Collections;
 
 public class VoiceRecognitionVosk : MonoBehaviour
 {
-    public string modelPath = "vosk-model-small-en-us-0.15";
+    public string modelPath = "vosk-model-en-us-0.22-lgraph";
     public VoiceCommandController commandController;   // <-- add
 
     private VoskRecognizer recognizer;

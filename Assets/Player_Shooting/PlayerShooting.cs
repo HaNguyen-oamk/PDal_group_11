@@ -9,6 +9,11 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletSpeed = 10f;
+    
+    // tag of enemy
+    public string enemyTag = "Enemy"; 
+    // **Max distance find **(change if want)
+    public float searchRadius = 20f; 
 
     SpriteRenderer sr; 
 
@@ -19,17 +24,13 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        // 1. Check if the game is currently running (Time.timeScale is > 0)
         if (Time.timeScale > 0f)
         {
-            // 2. Check if the mouse is currently over a UI element (like the Pause Button)
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                // If over UI, ignore the click for game actions.
                 return;
             }
 
-            // 3. Check for input to shoot
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 Shoot();
@@ -37,22 +38,75 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
+    // Find nearest enemy
+    private Transform FindNearestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        
+        Transform nearestEnemy = null;
+        float shortestDistance = Mathf.Infinity;
+        Vector3 currentPosition = transform.position;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector3.Distance(currentPosition, enemy.transform.position);
+
+            if (distanceToEnemy < shortestDistance && distanceToEnemy <= searchRadius)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy.transform;
+            }
+        }
+
+        return nearestEnemy;
+    }
+
     public void Shoot()
     {
         if (audioSource && shootSound)
             audioSource.PlayOneShot(shootSound);
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        GameObject bullet;
+        Rigidbody2D rb;
 
-        // Set bullet direction based on player's flip state
-        if (sr.flipX)
+        //  **Find nearest enemy
+        Transform target = FindNearestEnemy();
+
+        if (target == null)
         {
-            rb.velocity = Vector2.left * bulletSpeed;
+            Debug.Log("No enemy found. Shooting forward.");
+            
+            Vector2 defaultDirection = sr.flipX ? Vector2.left : Vector2.right;
+
+            bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = defaultDirection * bulletSpeed;
+
+            return; 
         }
-        else
+        
+    
+        Vector3 directionToTarget = (target.position - firePoint.position).normalized;
+        
+        //update char direction
+        if (directionToTarget.x < 0)
         {
-            rb.velocity = Vector2.right * bulletSpeed;
+            sr.flipX = true;
         }
+        else if (directionToTarget.x > 0)
+        {
+            sr.flipX = false;
+        }
+
+        // cal angle
+        float angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
+
+        // 
+        bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+        rb = bullet.GetComponent<Rigidbody2D>();
+
+        // apply velocity cal direction
+        rb.velocity = directionToTarget * bulletSpeed;
     }
 }
