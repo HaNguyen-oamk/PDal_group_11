@@ -80,3 +80,5 @@ desktop.ini
 *.orig
 *.merge
 *.swp
+
+.history/
