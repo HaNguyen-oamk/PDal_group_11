@@ -813,8 +813,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1727,7 +1727,7 @@ MonoBehaviour:
   skeletonPrefab: {fileID: 7023953232512466578, guid: f280824e33da7104bb9c1260b7caca34, type: 3}
   levelCompleteUI: {fileID: 1055960034}
   totalWaves: 3
-  spawnDelay: 1.5
+  spawnDelay: 2.7
 --- !u!4 &1155880353
 Transform:
   m_ObjectHideFlags: 0
@@ -1767,6 +1767,10 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 3865573844978459696}
+    - target: {fileID: 6656904557874026474, guid: 8e644df3ab5fdc14fae7520ab9bd09a5, type: 3}
+      propertyPath: bulletSpeed
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 6656904557874026474, guid: 8e644df3ab5fdc14fae7520ab9bd09a5, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -1837,25 +1841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e644df3ab5fdc14fae7520ab9bd09a5, type: 3}
-<<<<<<< HEAD
 --- !u!1 &1182891350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6656904557874026477, guid: 8e644df3ab5fdc14fae7520ab9bd09a5, type: 3}
   m_PrefabInstance: {fileID: 1182891349}
   m_PrefabAsset: {fileID: 0}
-=======
---- !u!114 &1182891350 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 694427105810850784, guid: 8e644df3ab5fdc14fae7520ab9bd09a5, type: 3}
-  m_PrefabInstance: {fileID: 1182891349}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1989cdd1324dad4488cf3264530cb6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> 7cca5db7d1f88e8e068f4d177dbdcdf929e739d8
 --- !u!1 &1188161629
 GameObject:
   m_ObjectHideFlags: 0
@@ -26354,7 +26344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5995413160766590356, guid: 145f6c5e5fbf4af4bb358c18a98061ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000009536743
+      value: 0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 5995413160766590356, guid: 145f6c5e5fbf4af4bb358c18a98061ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26964,8 +26954,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -27721,7 +27711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &3865573844978459709
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27866,6 +27856,10 @@ PrefabInstance:
     - target: {fileID: 5581395656811941755, guid: 1ae65d9636cf45742994d49121191691, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581395656811941756, guid: 1ae65d9636cf45742994d49121191691, type: 3}
+      propertyPath: bulletSpeed
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5581395656811941756, guid: 1ae65d9636cf45742994d49121191691, type: 3}
       propertyPath: bulletPrefab
@@ -28058,13 +28052,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38214332, y: 0}
   m_AnchorMax: {x: 1, y: 0.35754925}
-<<<<<<< HEAD
   m_AnchoredPosition: {x: -1278, y: 737.9}
   m_SizeDelta: {x: 2219.67, y: 2646.1287}
-=======
-  m_AnchoredPosition: {x: -1226, y: 745}
-  m_SizeDelta: {x: 1622.964, y: 2109.093}
->>>>>>> 7cca5db7d1f88e8e068f4d177dbdcdf929e739d8
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7010696043667433027
 GameObject:
