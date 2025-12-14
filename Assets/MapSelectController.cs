@@ -5,24 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class MapSelectController : MonoBehaviour
 {
+    public NavigationController navigation;
+
     public void OnSelect1()
     {
-        SceneManager.LoadScene("Voicecontrol");
+        PlayerPrefs.SetString("SelectedMap", "Voicecontrol");
+        navigation.GoToCharacterSelect();
     }
 
-    
     public void OnSelect2()
     {
-        SceneManager.LoadScene("Voicecontrol 2");
+        PlayerPrefs.SetString("SelectedMap", "Voicecontrol 2");
+        navigation.GoToCharacterSelect();
     }
 
     public void OnSelect3()
     {
-        SceneManager.LoadScene("SampleScene");
+        PlayerPrefs.SetString("SelectedMap", "SampleScene");
+        navigation.GoToCharacterSelect();
     }
 
     public void OnSelectBack()
     {
-        SceneManager.LoadScene("StartScene");
+        navigation.GoBackToStart();
     }
 }
