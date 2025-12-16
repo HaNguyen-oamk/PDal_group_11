@@ -49,6 +49,9 @@ public class PlayerShooting : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
+            if (!enemy.activeInHierarchy)
+                continue;
+
             float distanceToEnemy = Vector3.Distance(currentPosition, enemy.transform.position);
 
             if (distanceToEnemy < shortestDistance && distanceToEnemy <= searchRadius)
