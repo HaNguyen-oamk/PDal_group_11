@@ -1,25 +1,67 @@
-**Unity Voice Command Game** is a PC demo project that demonstrates how to control a **2D/3D** (**evaluating two options**) game character using **voice commands** in **English**.  
-The player can say words like **"run"**, **"walk"**, **"jump"**, **"turn left"**, **"turn right"**, **"go forward"**, **"go back"**, **"shoot"**, or **"attack"**, and the character reacts in real time.
+# 🎮 Unity Voice-Controlled Shooting Game (PC Demo)
 
-In addition to voice control, the character can also be operated using standard **keyboard inputs**.
+This is a Unity PC demo **shooting 2D game** where the player controls a character using
+**English voice commands** and **keyboard input**.
 
-This project focuses on **Unity**, **C#**, and simple **speech recognition** integration for **desktop (Windows)** environments.
+The player can move, change speed, and **shoot enemies** using voice commands in real time.
 
 ---
 
-## 🎮 Game Control by Voice in Unity
+## 🗣️ Voice Control (Vosk)
 
-The game demonstrates how to use Unity.
+This project uses **Vosk Speech Recognition** for voice input.
 
-At the moment, evaluating two options for implementing voice control:
-1. Running locally on Windows using **System.Speech** (free, offline)
-2. Using a cloud-based API such as **Azure Speech Services**, **Google Speech-to-Text**, or **Wit.ai**  
-   - Azure: free for 5 hours/month  
-   - Google: free for 60 minutes/month  
-   - Wit.ai: free for development
+- Offline speech recognition
+- Free and open-source
+- Works on Windows (PC)
+- No internet connection required
 
-### Voice Features
-- **Run / Walk** — Change movement speed  
-- **Jump** — Jump if grounded  
-- **Turn Left / Right / Forward / Back** — Change the character’s direction
-- **Shoot / Attack** — Perform combat actions
+Voice commands are normalized to reduce recognition errors before being applied to gameplay.
+
+---
+
+## 🎤 Voice Commands
+
+- **Run / Walk** – Change movement speed
+- **Go up / down / left / right** – Move character
+- **Turn left / Turn right** – Change direction
+- **Stop** – Stop movement
+- **Shoot / Fire** – shoot weapon
+
+Voice-based movement will auto-stop after a short time if no new command is detected.
+
+---
+
+## ⌨️ Keyboard Support
+
+The game also supports standard keyboard input for movement and shooting.
+This allows normal gameplay without voice control.
+
+---
+
+## 🗺️ Game Flow
+
+1. **Main Menu** – Start / Exit
+2. **Map Select** – Map 1 / Map 2 / Map 3
+3. **Player Select** – Player 1 / Player 2
+4. **Gameplay**
+   - Defeat enemies using shooting mechanics
+   - Player died → Game Over UI
+5. **Level Complete UI**
+   - Next Level / Restart / Exit
+
+---
+
+## 💻 Platform & Tools
+
+- Unity
+- C#
+- Vosk Speech Recognition
+- Windows (PC)
+
+---
+
+## 📦 Assets & License
+
+This project uses **free assets from Unity Asset Store** and other free sources,
+used for **educational purposes** under their respective licenses.
