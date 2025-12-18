@@ -7,6 +7,10 @@ The player can move, change speed, and **shoot enemies** using voice commands in
 
 ---
 
+![Game Demo](Assets/voicegame.gif)
+
+---
+
 ## 🗣️ Voice Control (Vosk)
 
 This project uses **Vosk Speech Recognition** for voice input.
