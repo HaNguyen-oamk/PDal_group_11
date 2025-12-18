@@ -7,7 +7,7 @@ The player can move, change speed, and **shoot enemies** using voice commands in
 
 ---
 
-![Game Demo](asset/output.gif)
+![Game Demo](asset/voicegame.gif)
 
 ---
 
